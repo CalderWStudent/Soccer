@@ -40,6 +40,6 @@ public class Team {
     public void printInfo() {
         System.out.println("\n" + name +
                            "\n" + "Wins: " + totalWins + ", Losses: " + totalLosses + ", Ties: " + totalTies +
-                           "\n" + "Goals Scored: " + totalGoalsScored + ", Goals Allowed: " + totalGoalsAllowed);
+                           "\n" + "Points Scored: " + totalGoalsScored + ", Points Allowed: " + totalGoalsAllowed);
     }
 }

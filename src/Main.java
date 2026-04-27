@@ -27,9 +27,6 @@ public class Main {
         // Create a Random object for generating random numbers, like temperatures and team matchups.
         Random random = new Random();
 
-        // Create additional space in the console for clarity.
-        System.out.println("");
-
         // The main weekly loop.
         while(consecutiveFreezing < 3) {
             weekCount++;
@@ -44,9 +41,6 @@ public class Main {
 
             // Add to the sum of temperatures to be averaged at the end.
             tempSum+=temperature;
-
-            System.out.println("\nWeek #" + weekCount +
-                               "\n" +" - Temperature: " + temperature + "°F");
 
             // If this week's temperature is greater than the freezing temperature, reset the consecutive number of freezing weeks in a row and create Games with full team information. Otherwise, add to the consecutive number and print a message.
             if (temperature > freezingTemp) {
@@ -63,8 +57,6 @@ public class Main {
             }
             else {
                 consecutiveFreezing++;
-
-                System.out.println(" - It is too cold to play.");
             }
 
             // Decrease the minimum and maximum random temperature ranges for every week to mimic the effect of temperatures decreasing as it gets closer to Winter, and so that the program doesn't run for unrealistically long amounts of time.
@@ -78,15 +70,22 @@ public class Main {
         // It does not matter that the Games are in pairs with the same temperature value, the sum will still be the same as long as it is divided by the total number of Games.
 
         // Print out the final info notifying the user that the Games have ended, displaying the hottest and average temperature values, and all the scoring for each Team.
-        System.out.println("\n\nThe season is over.\n");
-        System.out.println("\nHottest Temperature: " + highestTemp + "°F" +
-                           "\nAverage Temperature: " + averageTemp + "°F");
+        for (int i = 0; i < 3; i++) {
+            System.out.print("\nToo cold to play.");
+        }
+        System.out.println("\nSeason is over.");
+        System.out.print("\n*********RESULTS*********\n");
+
         for (Team team : teams) {
             team.printInfo();
         }
 
-        // Create additional space in the console for clarity.
-        System.out.println("");
+        for (Game game : gamesPlayed) {
+            game.printInfo();
+        }
+
+        System.out.println("\nHottest Temperature: " + highestTemp + "°F" +
+                           "\nAverage Temperature: " + averageTemp + "°F");
     }
 
     private static ArrayList<Team> getRandomMatchups(Random random, Team[] teams) {

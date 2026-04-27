@@ -26,8 +26,6 @@ public class Game {
         homeTeamScore = random.nextInt(maxScore);
 
         recordScoringToTeams();
-
-        printInfo();
     }
 
     private static int tempToScore(double temperature) {
@@ -62,8 +60,9 @@ public class Game {
     }
 
     public void printInfo() {
-        System.out.println(" - Game #" + id +
-                           "\n" +"    - Away Team: " + awayTeam.getName() + ", " + awayTeamScore +
-                           "\n" +"    - Home Team: " + homeTeam.getName() + ", " + homeTeamScore);
+        System.out.println("\nGame #" + id +
+                           "\n" +"Temperature: " + temperature + "°F" +
+                           "\n" +"Away Team: " + awayTeam.getName() + ", " + awayTeamScore +
+                           "\n" +"Home Team: " + homeTeam.getName() + ", " + homeTeamScore);
     }
 }
