@@ -46,7 +46,7 @@ public class Main {
             tempSum+=temperature;
 
             System.out.println("\nWeek #" + weekCount +
-                               "\n" +" - Temperature: " + temperature + "°F");
+                               "\n" +"  Temperature: " + temperature + "°F");
 
             // If this week's temperature is greater than the freezing temperature, reset the consecutive number of freezing weeks in a row and create Games with full team information. Otherwise, add to the consecutive number and print a message.
             if (temperature > freezingTemp) {
@@ -64,7 +64,7 @@ public class Main {
             else {
                 consecutiveFreezing++;
 
-                System.out.println(" - It is too cold to play.");
+                System.out.println("  It is too cold to play.");
             }
 
             // Decrease the minimum and maximum random temperature ranges for every week to mimic the effect of temperatures decreasing as it gets closer to Winter, and so that the program doesn't run for unrealistically long amounts of time.

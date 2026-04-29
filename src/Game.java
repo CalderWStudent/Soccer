@@ -62,8 +62,8 @@ public class Game {
     }
 
     public void printInfo() {
-        System.out.println(" - Game #" + id +
-                           "\n" +"    - Away Team: " + awayTeam.getName() + ", " + awayTeamScore +
-                           "\n" +"    - Home Team: " + homeTeam.getName() + ", " + homeTeamScore);
+        System.out.println("  Game #" + id +
+                           "\n" +"    Away Team: " + awayTeam.getName() + ", " + awayTeamScore +
+                           "\n" +"    Home Team: " + homeTeam.getName() + ", " + homeTeamScore);
     }
 }

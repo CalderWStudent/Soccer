@@ -39,7 +39,7 @@ public class Team {
     // Print out the total scoring info for this team across all the games.
     public void printInfo() {
         System.out.println("\n" + name +
-                           "\n" + "Wins: " + totalWins + ", Losses: " + totalLosses + ", Ties: " + totalTies +
-                           "\n" + "Goals Scored: " + totalGoalsScored + ", Goals Allowed: " + totalGoalsAllowed);
+                           "\n" + "  Wins: " + totalWins + ", Losses: " + totalLosses + ", Ties: " + totalTies +
+                           "\n" + "  Goals Scored: " + totalGoalsScored + ", Goals Allowed: " + totalGoalsAllowed);
     }
 }
